@@ -3,18 +3,33 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "test3@test.com",
   "password": "password"
 }
 
+### Sign in
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test3@test.com",
+  "password": "password"
+}
+
+### Sign out
+POST http://localhost:3000/auth/signout
+
+### Get the currently signed-in user
+GET http://localhost:3000/auth/whoami
+
 ### Find a user with a given ID
-GET http://localhost:3000/auth/1
+GET http://localhost:3000/auth/2
 
 ### Find a user with a given email
 GET http://localhost:3000/auth?email=test@test.com
 
 ### Delete a user by id
-DELETE http://localhost:3000/auth/2
+DELETE http://localhost:3000/auth/1
 
 ### Update a user by id
 PATCH http://localhost:3000/auth/1
